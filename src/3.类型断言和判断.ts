@@ -13,7 +13,7 @@ str.toFixed()
 str = 'abc'
 str.toLowerCase()
 
-// 2. 非空断言 ？ 断言
+// 2. 非空断言 链判断字符 断言
 
 let ele: HTMLElement | null = document.getElementById('#app');
 // ele!.style.color = 'red'; // 非空断言 表示一定有值
