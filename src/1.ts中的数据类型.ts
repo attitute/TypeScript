@@ -6,15 +6,19 @@ const num:number = 1
 const str:string = 'hello'
 const bool:boolean = true
 
+// 数组 存放一类类型得集合
+const arr1:number[] = [1,2,2,3]
+const arrs:string[] = ['1','2','2','3']
+
 // 元组  表示长度和个数 都限制好了
 const yarr:[string,number,boolean] = ['1',1,true]
 // 可以在元组中添加内容，不能通过索引添加属性
 // 只能放入元组中已经声明过的类型
 yarr.push(false)
+// yarr.push(undefined) // 错误示范
+// yarr[4] = false // 错误示范
 console.log(yarr)
 
-// 数组 存放一类类型得集合
-const arr1:number[] = [1,2,2,3]
 
 // 联合类型
 const arr:(number | string | undefined)[] = ['1',2,3,'4',undefined]
@@ -23,21 +27,23 @@ const arr2:Array<number | string> = [1,'2',2]
 
 // 枚举类型 
 // 异构枚举 可以在枚举中放不同得类型， 可以通过数字 自动向下推断
-// enum USER_ROLE {
-//     USER = 'a', // 默认下标是从0开始
-//     ADMIN = 3, // 修改了下标 后一个属性得下标在此基础加1
-//     MANAGER
-// }
+enum USER_ROLE {
+    USER = 'a', // 默认下标是从0开始
+    ADMIN = 3, // 修改了下标 后一个属性得下标在此基础加1
+    MANAGER
+}
 // 默认可以正向取出 也可以反举
+console.log(USER_ROLE.USER) // 正确
+console.log(USER_ROLE[0]) // 错误
 
 // 常量枚举 只是提供了一个类型
-const enum USER_ROLE{ // 语义化
-    USER,
-    ADMIN
-}
-// 不能反举
-console.log(USER_ROLE.USER) // 正确
-// console.log(USER_ROLE[0]) // 错误
+// const enum USER_ROLE{ // 语义化
+//     USER,
+//     ADMIN
+// }
+// // 不能反举
+// console.log(USER_ROLE.USER) // 正确
+// // console.log(USER_ROLE[0]) // 错误
 
 
 // any 就是不检测数据类型
@@ -59,8 +65,8 @@ let v:void = undefined
 // never类型 永远不是任何类型得子类型 可以把never赋给任何类型
 // 永远达不到得情况有三种 1.错误 2.死循环 3.类型判断时会出现never
 
-// new Error('')
-// while(true){}
+new Error('')
+while(true){}
 
 function bytype (val:number|string) {
     if(typeof val == 'string') {
