@@ -1,9 +1,7 @@
 
 // 函数想要得表示类型 function函数关键字来声明  表达式方式来声明
 
-// 考虑入参和函数的返回值
-
-// 1
+// 1.考虑入参和函数的返回值
 function sum(a:string, b:string):string {
     return a + b
 }
@@ -18,11 +16,10 @@ let sum1:Sum = (a,b)=>{
 
 
 // 3. 可选参数? 默认值 =
-
 // b可传字符串类型 或者不传 不传就是undefine
-// let sum2:(a:string, b?:string)=>string  =  (a,b) => {
-//     return a
-// }
+let sum2:(a:string, b?:string)=>string = (a,b) => {
+    return a
+}
 
 
 let sum3  =  (a:string, b:string = 'b'):string => {

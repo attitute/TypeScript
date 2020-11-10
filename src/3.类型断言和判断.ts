@@ -4,7 +4,7 @@
 
 let str:string | number // 当没有初始化得时候 只能调用两者类型中得共同方法
 
-// str,toString
+// str.toString
 // str.valueOf
 str = 1 // 会根据赋值 来推到后续的方法
 str.toFixed()
@@ -16,7 +16,7 @@ str.toLowerCase()
 // 2. 非空断言 链判断字符 断言
 
 let ele: HTMLElement | null = document.getElementById('#app');
-// ele!.style.color = 'red'; // 非空断言 表示一定有值
+ele!.style.color = 'red'; // 非空断言 表示一定有值
 
 ele?.style?.color; // ele && ele.style && ele.style.color
 

@@ -37,7 +37,7 @@ const funllName2:IFullName1 = (firtName, lastName) => {
   return firtName+lastName
 }
 
-// 混合类型 计数器 一个函数返回一个函数，返回的函数有属性
+// // 混合类型 计数器 一个函数返回一个函数，返回的函数有属性
 // interface ICount {
 //     count:number,
 //     ():number,
