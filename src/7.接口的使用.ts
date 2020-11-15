@@ -154,7 +154,7 @@ class Person {
 }
 
 interface Clazz<T> {
-    new (name:string):T
+    new (name:string):T // 表示类 返回值T
 }
 
 function createInstance<T> (clazz:Clazz<T>, name:string){
@@ -164,7 +164,9 @@ function createInstance<T> (clazz:Clazz<T>, name:string){
 let r = createInstance<Person>(Person, 'me')
 
 
-
+// 类的两种定义方法
+// new (name:string)=>any
+// new {(name:string):any}
 
 
 

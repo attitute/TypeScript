@@ -27,6 +27,8 @@ ele?.style?.color; // ele && ele.style && ele.style.color
 // ele as number // 错误
 ele as any as number // 双重断言 会破坏原有类型
 
+// as断言只能断言 已经有的属性
+
 
 // 3.字面量类型  
 // 只能自己取定义的
